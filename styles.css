@@ -7,6 +7,10 @@
   --accent-muted: #a08b52;
   --accent-soft: rgba(212, 181, 106, 0.12);
   --border: rgba(255, 255, 255, 0.07);
+  /* Cloud brand accents (theme tie-in; logos are trademarks of their owners) */
+  --cloud-gcp: #4285f4;
+  --cloud-azure: #0078d4;
+  --cloud-aws: #ff9900;
   --font-sans: "Outfit", system-ui, sans-serif;
   --font-serif: "Instrument Serif", Georgia, serif;
   --space-xs: 0.5rem;
@@ -67,13 +71,14 @@ body {
   position: absolute;
   width: min(42vw, 22rem);
   height: auto;
-  opacity: 0.07;
+  opacity: 0.1;
 }
 
 .cloud-backdrop__logo--gcp {
   top: 8%;
   right: -4%;
   transform: rotate(-14deg);
+  filter: drop-shadow(0 0 3.5rem rgba(66, 133, 244, 0.22));
 }
 
 .cloud-backdrop__logo--azure {
@@ -81,6 +86,7 @@ body {
   left: -6%;
   transform: rotate(10deg);
   width: min(38vw, 19rem);
+  filter: drop-shadow(0 0 3rem rgba(0, 120, 212, 0.2));
 }
 
 .cloud-backdrop__logo--aws {
@@ -88,11 +94,12 @@ body {
   right: 12%;
   transform: rotate(-8deg);
   width: min(36vw, 18rem);
+  filter: drop-shadow(0 0 2.75rem rgba(255, 153, 0, 0.18));
 }
 
 @media (max-width: 900px) {
   .cloud-backdrop__logo {
-    opacity: 0.04;
+    opacity: 0.065;
   }
 
   .cloud-backdrop__logo--gcp {
@@ -117,6 +124,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .cloud-backdrop__logo {
     transform: none;
+    filter: none;
   }
 }
 
@@ -128,7 +136,14 @@ body {
   width: 0;
   z-index: 100;
   pointer-events: none;
-  background: linear-gradient(90deg, var(--accent-muted), var(--accent));
+  background: linear-gradient(
+    90deg,
+    var(--cloud-azure),
+    var(--cloud-gcp),
+    var(--cloud-aws),
+    var(--accent-muted),
+    var(--accent)
+  );
   transition: width 0.12s linear;
 }
 
@@ -139,6 +154,9 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
+    radial-gradient(ellipse 55% 48% at 92% 8%, rgba(66, 133, 244, 0.09), transparent 52%),
+    radial-gradient(ellipse 50% 44% at 6% 42%, rgba(0, 120, 212, 0.08), transparent 50%),
+    radial-gradient(ellipse 48% 40% at 88% 88%, rgba(255, 153, 0, 0.07), transparent 48%),
     radial-gradient(ellipse 100% 80% at 50% -30%, rgba(212, 181, 106, 0.14), transparent 55%),
     radial-gradient(ellipse 50% 40% at 100% 20%, rgba(212, 181, 106, 0.05), transparent 50%),
     radial-gradient(ellipse 40% 35% at 0% 80%, rgba(212, 181, 106, 0.04), transparent 45%);
@@ -416,9 +434,67 @@ main {
   bottom: 0;
   width: min(28rem, 85vw);
   height: 1px;
-  background: linear-gradient(90deg, var(--accent-muted), transparent);
-  opacity: 0.5;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--cloud-azure) 55%, transparent),
+    color-mix(in srgb, var(--cloud-gcp) 50%, transparent),
+    color-mix(in srgb, var(--cloud-aws) 45%, transparent),
+    var(--accent-muted),
+    transparent
+  );
+  opacity: 0.65;
   pointer-events: none;
+}
+
+.cloud-brand-strip {
+  list-style: none;
+  margin: 0 0 var(--space-md);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--space-sm);
+}
+
+.cloud-brand-strip__item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg-elevated) 82%, transparent);
+}
+
+.cloud-brand-strip__item--gcp {
+  border-color: color-mix(in srgb, var(--cloud-gcp) 28%, var(--border));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--cloud-gcp) 8%, transparent);
+}
+
+.cloud-brand-strip__item--azure {
+  border-color: color-mix(in srgb, var(--cloud-azure) 28%, var(--border));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--cloud-azure) 8%, transparent);
+}
+
+.cloud-brand-strip__item--aws {
+  border-color: color-mix(in srgb, var(--cloud-aws) 28%, var(--border));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--cloud-aws) 8%, transparent);
+}
+
+.cloud-brand-strip__item img {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.cloud-brand-strip__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1.2;
 }
 
 .hero-eyebrow {
