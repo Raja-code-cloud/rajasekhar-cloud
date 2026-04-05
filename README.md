@@ -24,7 +24,7 @@ The live site is built and published by **GitHub Actions** on every push to `mai
 This repo includes a **`CNAME`** file (`rajasekhar.cloud`). To serve the site on that domain:
 
 1. In **Settings** → **Pages** → **Custom domain**, enter `rajasekhar.cloud` and save (GitHub may detect the `CNAME` file).
-2. At your DNS host (e.g. GoDaddy), **remove** records that point the domain to Netlify, then add GitHub’s records. Official steps: [Managing a custom domain for GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+2. At your DNS host (e.g. GoDaddy), add the **A / CNAME / ALIAS** records GitHub shows for your domain. Official steps: [Managing a custom domain for GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 3. Enable **Enforce HTTPS** in Pages settings after DNS verifies.
 
 Until DNS is updated, keep using the **github.io** URL above.
@@ -40,7 +40,3 @@ Until DNS is updated, keep using the **github.io** URL above.
 ## Local preview
 
 Open `index.html` in a browser, or run any static server from this folder.
-
-## Optional: Netlify
-
-`netlify.toml` remains if you ever mirror the site there; it is **not** required for GitHub hosting. Keep `.netlify-token` local only (see `.gitignore`).
