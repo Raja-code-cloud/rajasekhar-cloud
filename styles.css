@@ -855,17 +855,22 @@ main {
   gap: var(--space-lg);
 }
 
-/* Linux Foundation + HashiCorp: stacked on very narrow viewports, side-by-side when wide enough */
+/* Linux Foundation + HashiCorp — always two columns in this row (full width of parent) */
 .cert-board__platform {
   display: grid;
+  width: 100%;
   gap: var(--space-lg);
   align-items: start;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-@media (min-width: 640px) {
+.cert-board__platform > .cert-provider {
+  min-width: 0;
+}
+
+@media (max-width: 420px) {
   .cert-board__platform {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
