@@ -2,6 +2,12 @@
 
 Personal site: multi-cloud architecture, case studies, resume.
 
+**GitHub account:** [Raja-code-cloud](https://github.com/Raja-code-cloud)  
+**Repository:** `https://github.com/Raja-code-cloud/rajasekhar-cloud`
+
+After Pages is enabled, the site is also available at  
+`https://raja-code-cloud.github.io/rajasekhar-cloud/` (in addition to your custom domain if configured).
+
 ## GitHub Pages
 
 After the first push, enable Pages once:
