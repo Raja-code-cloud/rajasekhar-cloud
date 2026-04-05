@@ -225,8 +225,7 @@
       <div class="section-head section-head--wide">
         <h2>Certifications</h2>
         <p>
-          Professional credentials from <strong>Google Cloud</strong>, <strong>Microsoft</strong>, <strong>CNCF / Linux Foundation</strong>,
-          and <strong>HashiCorp</strong>, organized by issuer below.
+          Credentials grouped by <strong>provider</strong>: Google Cloud, Microsoft, Linux Foundation (CNCF), and HashiCorp.
         </p>
       </div>
       <ul class="cert-summary" aria-label="Certification snapshot">
@@ -243,64 +242,68 @@
           <span class="cert-summary__label">Google Cloud credentials</span>
         </li>
       </ul>
-      <ul class="cert-list">
-        <li class="cert-list__divider" aria-hidden="true"><span>Google Cloud</span></li>
-        <li class="cert-list__item cert-list__item--featured">
-          <span class="cert-list__badge">Featured</span>
-          <span class="cert-list__issuer">Google Cloud</span>
-          <span class="cert-list__name">Professional Cloud Architect (PCA)</span>
-        </li>
-        <li class="cert-list__item">
-          <span class="cert-list__issuer">Google Cloud</span>
-          <span class="cert-list__name">Professional Cloud Security Engineer</span>
-        </li>
-        <li class="cert-list__item">
-          <span class="cert-list__issuer">Google Cloud</span>
-          <span class="cert-list__name">Professional Cloud DevOps Engineer</span>
-        </li>
-        <li class="cert-list__item">
-          <span class="cert-list__issuer">Google Cloud</span>
-          <span class="cert-list__name">Professional Cloud Developer</span>
-        </li>
-        <li class="cert-list__item">
-          <span class="cert-list__issuer">Google Cloud</span>
-          <span class="cert-list__name">Professional Cloud Database Engineer</span>
-        </li>
-        <li class="cert-list__item">
-          <span class="cert-list__issuer">Google Cloud</span>
-          <span class="cert-list__name">Associate Cloud Engineer</span>
-        </li>
-        <li class="cert-list__item">
-          <span class="cert-list__issuer">Google Cloud</span>
-          <span class="cert-list__name">Cloud Digital Leader · Generative AI Leader</span>
-        </li>
-        <li class="cert-list__divider" aria-hidden="true"><span>Microsoft</span></li>
-        <li class="cert-list__item">
-          <span class="cert-list__issuer">Microsoft</span>
-          <span class="cert-list__name">Microsoft Certified Trainer (MCT) – 2021–2023</span>
-        </li>
-        <li class="cert-list__item">
-          <span class="cert-list__issuer">Microsoft</span>
-          <span class="cert-list__name">Azure Fundamentals (AZ-900)</span>
-        </li>
-        <li class="cert-list__item">
-          <span class="cert-list__issuer">Microsoft</span>
-          <span class="cert-list__name">Azure Administrator (AZ-104)</span>
-        </li>
-        <li class="cert-list__item">
-          <span class="cert-list__issuer">Microsoft</span>
-          <span class="cert-list__name">MCSA: Windows Server</span>
-        </li>
-        <li class="cert-list__divider" aria-hidden="true"><span>Platform &amp; IaC</span></li>
-        <li class="cert-list__item">
-          <span class="cert-list__issuer">CNCF / Linux Foundation</span>
-          <span class="cert-list__name">Certified Kubernetes Administrator (CKA)</span>
-        </li>
-        <li class="cert-list__item">
-          <span class="cert-list__issuer">HashiCorp</span>
-          <span class="cert-list__name">HashiCorp Certified: Terraform Associate</span>
-        </li>
-      </ul>
+      <div class="cert-board">
+        <section class="cert-provider" aria-labelledby="cert-heading-gcp">
+          <h3 id="cert-heading-gcp" class="cert-provider__title">Google Cloud</h3>
+          <ul class="cert-provider__list">
+            <li class="cert-list__item cert-list__item--featured">
+              <span class="cert-list__badge">Featured</span>
+              <span class="cert-list__name">Professional Cloud Architect (PCA)</span>
+            </li>
+            <li class="cert-list__item">
+              <span class="cert-list__name">Professional Cloud Security Engineer</span>
+            </li>
+            <li class="cert-list__item">
+              <span class="cert-list__name">Professional Cloud DevOps Engineer</span>
+            </li>
+            <li class="cert-list__item">
+              <span class="cert-list__name">Professional Cloud Developer</span>
+            </li>
+            <li class="cert-list__item">
+              <span class="cert-list__name">Professional Cloud Database Engineer</span>
+            </li>
+            <li class="cert-list__item">
+              <span class="cert-list__name">Associate Cloud Engineer</span>
+            </li>
+            <li class="cert-list__item">
+              <span class="cert-list__name">Cloud Digital Leader · Generative AI Leader</span>
+            </li>
+          </ul>
+        </section>
+        <section class="cert-provider" aria-labelledby="cert-heading-ms">
+          <h3 id="cert-heading-ms" class="cert-provider__title">Microsoft</h3>
+          <ul class="cert-provider__list">
+            <li class="cert-list__item">
+              <span class="cert-list__name">Microsoft Certified Trainer (MCT) – 2021–2023</span>
+            </li>
+            <li class="cert-list__item">
+              <span class="cert-list__name">Azure Fundamentals (AZ-900)</span>
+            </li>
+            <li class="cert-list__item">
+              <span class="cert-list__name">Azure Administrator (AZ-104)</span>
+            </li>
+            <li class="cert-list__item">
+              <span class="cert-list__name">MCSA: Windows Server</span>
+            </li>
+          </ul>
+        </section>
+        <section class="cert-provider" aria-labelledby="cert-heading-lf">
+          <h3 id="cert-heading-lf" class="cert-provider__title">Linux Foundation (CNCF)</h3>
+          <ul class="cert-provider__list">
+            <li class="cert-list__item">
+              <span class="cert-list__name">Certified Kubernetes Administrator (CKA)</span>
+            </li>
+          </ul>
+        </section>
+        <section class="cert-provider" aria-labelledby="cert-heading-hc">
+          <h3 id="cert-heading-hc" class="cert-provider__title">HashiCorp</h3>
+          <ul class="cert-provider__list">
+            <li class="cert-list__item">
+              <span class="cert-list__name">HashiCorp Certified: Terraform Associate</span>
+            </li>
+          </ul>
+        </section>
+      </div>
     </section>
 
     <section id="experience" class="section experience">
