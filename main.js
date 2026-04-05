@@ -101,7 +101,7 @@
     );
     document
       .querySelectorAll(
-        ".metric-card, .work-grid--usecases > li, .case-study, .case-study-teaser, .role-card, .cloud-brand-strip__item"
+        ".metric-card, .work-grid--usecases > li, .case-study, .case-study-teaser, .role-card"
       )
       .forEach(function (el) {
         el.classList.add("reveal-on-scroll");
