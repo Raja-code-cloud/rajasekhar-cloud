@@ -451,6 +451,15 @@ main {
   max-width: 20ch;
 }
 
+.hero-subtitle {
+  margin: 0 0 var(--space-sm);
+  max-width: 32rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--text-muted) 92%, var(--text));
+  font-weight: 400;
+}
+
 .hero-tagline {
   margin: 0 0 var(--space-md);
   color: var(--accent);
@@ -737,7 +746,111 @@ main {
   margin-bottom: 0;
 }
 
+/* About — practice-area tiles (inspired by portfolio “stack depth” summaries) */
+.expertise-pillars {
+  list-style: none;
+  margin: var(--space-lg) 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 520px) {
+  .expertise-pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .expertise-pillars {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+.expertise-pillars__card {
+  padding: var(--space-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.expertise-pillars__metric {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+
+.expertise-pillars__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text);
+}
+
+.expertise-pillars__hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
 /* Certifications */
+.cert-summary {
+  list-style: none;
+  margin: 0 0 var(--space-md);
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 640px) {
+  .cert-summary {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+.cert-summary__item {
+  padding: var(--space-md);
+  background: color-mix(in srgb, var(--bg-elevated) 90%, transparent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.cert-summary__value {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 400;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.cert-summary__label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+.cert-verify-note {
+  margin: 0 0 var(--space-lg);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  max-width: 44rem;
+  line-height: 1.55;
+}
+
 .cert-list {
   list-style: none;
   margin: 0;
@@ -752,6 +865,28 @@ main {
   }
 }
 
+.cert-list__divider {
+  grid-column: 1 / -1;
+  list-style: none;
+  margin: var(--space-md) 0 var(--space-xs);
+  padding: 0;
+}
+
+.cert-list__divider:first-child {
+  margin-top: 0;
+}
+
+.cert-list__divider span {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-muted);
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border));
+}
+
 .cert-list__item {
   position: relative;
   padding: var(--space-md);
@@ -760,12 +895,28 @@ main {
   border-radius: var(--radius);
   font-size: 0.98rem;
   line-height: 1.45;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cert-list__issuer {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.cert-list__name {
+  font-weight: 500;
+  color: var(--text);
 }
 
 .cert-list__item--featured {
   border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
   background: linear-gradient(135deg, var(--accent-soft), var(--bg-elevated));
-  padding-top: calc(var(--space-md) + 1.25rem);
+  padding-top: calc(var(--space-md) + 1.35rem);
 }
 
 .cert-list__badge {
@@ -1431,7 +1582,8 @@ main {
   .hero-actions,
   .hero-scroll,
   .reading-progress,
-  .footer-nav {
+  .footer-nav,
+  .cert-verify-note {
     display: none !important;
   }
 
@@ -1456,6 +1608,8 @@ main {
   .case-study-teaser,
   .work-card,
   .metric-card,
+  .expertise-pillars__card,
+  .cert-summary__item,
   .cert-list__item,
   .skill-pills li,
   .achievement-list li,
