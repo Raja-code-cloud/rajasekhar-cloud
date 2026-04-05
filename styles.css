@@ -859,6 +859,11 @@ main {
     grid-template-columns: 1fr 1fr;
     align-items: start;
   }
+
+  /* Full-width row under Google + Microsoft so CNCF and HashiCorp share the next row */
+  .cert-provider--row-full {
+    grid-column: 1 / -1;
+  }
 }
 
 .cert-provider {
@@ -887,6 +892,14 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+}
+
+@media (min-width: 640px) {
+  .cert-provider__list--inline-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
 }
 
 .cert-list__item {
