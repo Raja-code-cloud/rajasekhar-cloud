@@ -850,19 +850,31 @@ main {
 }
 
 .cert-board {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-lg);
 }
 
+/* Wide: GCP left (tall) | Microsoft, then AWS, then CNCF + HashiCorp side-by-side */
 @media (min-width: 720px) {
   .cert-board {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
     align-items: start;
   }
 
-  /* Full-width row under Google + Microsoft so CNCF and HashiCorp share the next row */
-  .cert-provider--row-full {
-    grid-column: 1 / -1;
+  .cert-board__right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .cert-board__platform {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    align-items: start;
   }
 }
 

@@ -248,77 +248,83 @@
         </li>
       </ul>
       <div class="cert-board">
-        <section class="cert-provider" aria-labelledby="cert-heading-gcp">
-          <h3 id="cert-heading-gcp" class="cert-provider__title">Google Cloud</h3>
-          <ul class="cert-provider__list">
-            <li class="cert-list__item cert-list__item--featured">
-              <span class="cert-list__badge">Featured</span>
-              <span class="cert-list__name">Professional Cloud Architect (PCA)</span>
-            </li>
-            <li class="cert-list__item">
-              <span class="cert-list__name">Professional Cloud Security Engineer</span>
-            </li>
-            <li class="cert-list__item">
-              <span class="cert-list__name">Professional Cloud DevOps Engineer</span>
-            </li>
-            <li class="cert-list__item">
-              <span class="cert-list__name">Professional Cloud Developer</span>
-            </li>
-            <li class="cert-list__item">
-              <span class="cert-list__name">Professional Cloud Database Engineer</span>
-            </li>
-            <li class="cert-list__item">
-              <span class="cert-list__name">Associate Cloud Engineer</span>
-            </li>
-            <li class="cert-list__item">
-              <span class="cert-list__name">Cloud Digital Leader · Generative AI Leader</span>
-            </li>
-          </ul>
-        </section>
-        <section class="cert-provider" aria-labelledby="cert-heading-ms">
-          <h3 id="cert-heading-ms" class="cert-provider__title">Microsoft</h3>
-          <ul class="cert-provider__list">
-            <li class="cert-list__item">
-              <span class="cert-list__name">Microsoft Certified Trainer (MCT) – 2021–2023</span>
-            </li>
-            <li class="cert-list__item">
-              <span class="cert-list__name">Azure Fundamentals (AZ-900)</span>
-            </li>
-            <li class="cert-list__item">
-              <span class="cert-list__name">Azure Administrator (AZ-104)</span>
-            </li>
-            <li class="cert-list__item">
-              <span class="cert-list__name">MCSA: Windows Server</span>
-            </li>
-          </ul>
-        </section>
-        <section class="cert-provider cert-provider--row-full" aria-labelledby="cert-heading-aws">
-          <h3 id="cert-heading-aws" class="cert-provider__title">Amazon Web Services (AWS)</h3>
-          <ul class="cert-provider__list cert-provider__list--inline-pair">
-            <li class="cert-list__item">
-              <span class="cert-list__name">AWS Certified SysOps Administrator – Associate</span>
-            </li>
-            <li class="cert-list__item">
-              <span class="cert-list__name">AWS Certified Cloud Practitioner</span>
-            </li>
-          </ul>
-        </section>
-        <section class="cert-provider" aria-labelledby="cert-heading-lf">
-          <h3 id="cert-heading-lf" class="cert-provider__title">Linux Foundation (CNCF)</h3>
-          <ul class="cert-provider__list">
-            <li class="cert-list__item">
-              <span class="cert-list__name">Certified Kubernetes Administrator (CKA)</span>
-            </li>
-          </ul>
-        </section>
-        <section class="cert-provider" aria-labelledby="cert-heading-hc">
-          <h3 id="cert-heading-hc" class="cert-provider__title">HashiCorp</h3>
-          <ul class="cert-provider__list">
-            <li class="cert-list__item">
-              <span class="cert-list__name">HashiCorp Certified: Terraform Associate</span>
-            </li>
-          </ul>
-        </section>
+        <div class="cert-board__gcp">
+          <section class="cert-provider" aria-labelledby="cert-heading-gcp">
+            <h3 id="cert-heading-gcp" class="cert-provider__title">Google Cloud</h3>
+            <ul class="cert-provider__list">
+              <li class="cert-list__item cert-list__item--featured">
+                <span class="cert-list__badge">Featured</span>
+                <span class="cert-list__name">Professional Cloud Architect (PCA)</span>
+              </li>
+              <li class="cert-list__item">
+                <span class="cert-list__name">Professional Cloud Security Engineer</span>
+              </li>
+              <li class="cert-list__item">
+                <span class="cert-list__name">Professional Cloud DevOps Engineer</span>
+              </li>
+              <li class="cert-list__item">
+                <span class="cert-list__name">Professional Cloud Developer</span>
+              </li>
+              <li class="cert-list__item">
+                <span class="cert-list__name">Professional Cloud Database Engineer</span>
+              </li>
+              <li class="cert-list__item">
+                <span class="cert-list__name">Associate Cloud Engineer</span>
+              </li>
+              <li class="cert-list__item">
+                <span class="cert-list__name">Cloud Digital Leader · Generative AI Leader</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="cert-board__right">
+          <section class="cert-provider" aria-labelledby="cert-heading-ms">
+            <h3 id="cert-heading-ms" class="cert-provider__title">Microsoft</h3>
+            <ul class="cert-provider__list">
+              <li class="cert-list__item">
+                <span class="cert-list__name">Microsoft Certified Trainer (MCT) – 2021–2023</span>
+              </li>
+              <li class="cert-list__item">
+                <span class="cert-list__name">Azure Fundamentals (AZ-900)</span>
+              </li>
+              <li class="cert-list__item">
+                <span class="cert-list__name">Azure Administrator (AZ-104)</span>
+              </li>
+              <li class="cert-list__item">
+                <span class="cert-list__name">MCSA: Windows Server</span>
+              </li>
+            </ul>
+          </section>
+          <section class="cert-provider" aria-labelledby="cert-heading-aws">
+            <h3 id="cert-heading-aws" class="cert-provider__title">Amazon Web Services (AWS)</h3>
+            <ul class="cert-provider__list cert-provider__list--inline-pair">
+              <li class="cert-list__item">
+                <span class="cert-list__name">AWS Certified SysOps Administrator – Associate</span>
+              </li>
+              <li class="cert-list__item">
+                <span class="cert-list__name">AWS Certified Cloud Practitioner</span>
+              </li>
+            </ul>
+          </section>
+          <div class="cert-board__platform">
+            <section class="cert-provider" aria-labelledby="cert-heading-lf">
+              <h3 id="cert-heading-lf" class="cert-provider__title">Linux Foundation (CNCF)</h3>
+              <ul class="cert-provider__list">
+                <li class="cert-list__item">
+                  <span class="cert-list__name">Certified Kubernetes Administrator (CKA)</span>
+                </li>
+              </ul>
+            </section>
+            <section class="cert-provider" aria-labelledby="cert-heading-hc">
+              <h3 id="cert-heading-hc" class="cert-provider__title">HashiCorp</h3>
+              <ul class="cert-provider__list">
+                <li class="cert-list__item">
+                  <span class="cert-list__name">HashiCorp Certified: Terraform Associate</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
       </div>
     </section>
 
