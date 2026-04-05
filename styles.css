@@ -855,7 +855,21 @@ main {
   gap: var(--space-lg);
 }
 
-/* Wide: GCP left (tall) | Microsoft, then AWS, then CNCF + HashiCorp side-by-side */
+/* Linux Foundation + HashiCorp: stacked on very narrow viewports, side-by-side when wide enough */
+.cert-board__platform {
+  display: grid;
+  gap: var(--space-lg);
+  align-items: start;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .cert-board__platform {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Wide: GCP left (tall) | Microsoft, then AWS, then CNCF + HashiCorp row */
 @media (min-width: 720px) {
   .cert-board {
     display: grid;
@@ -868,13 +882,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: var(--space-lg);
-  }
-
-  .cert-board__platform {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-lg);
-    align-items: start;
   }
 }
 
