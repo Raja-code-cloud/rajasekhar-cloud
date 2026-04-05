@@ -29,6 +29,14 @@ This repo includes a **`CNAME`** file (`rajasekhar.cloud`). To serve the site on
 
 Until DNS is updated, keep using the **github.io** URL above.
 
+## Résumé files
+
+| File | Use |
+|------|-----|
+| `resume.html` | Default, linked from the site; **role titles only** (no employer names or dates). |
+| `resume-full.html` | Alternate print styling; same experience text as `resume.html`. |
+| `resume-private.html` | **Employers + dates** for recruiters; **`noindex`**, **not linked** from `index.html` or `resume.html`—send the URL directly. On a **public** repo the path can still be guessed; treat as convenience, not secrecy. |
+
 ## Local preview
 
 Open `index.html` in a browser, or run any static server from this folder.

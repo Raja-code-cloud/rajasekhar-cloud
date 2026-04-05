@@ -782,8 +782,8 @@ main {
   border-radius: 4px;
 }
 
-/* Experience timeline */
-.timeline {
+/* Professional experience (roles only — no employer / dates on site) */
+.experience-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -809,21 +809,8 @@ main {
   font-family: var(--font-serif);
   font-size: 1.35rem;
   font-weight: 400;
-  margin: 0 0 var(--space-xs);
-  letter-spacing: -0.02em;
-}
-
-.role-card__company {
   margin: 0;
-  font-weight: 600;
-  color: var(--text);
-  font-size: 1rem;
-}
-
-.role-card__dates {
-  margin: var(--space-xs) 0 0;
-  font-size: 0.9rem;
-  color: var(--text-muted);
+  letter-spacing: -0.02em;
 }
 
 .role-card__bullets {
